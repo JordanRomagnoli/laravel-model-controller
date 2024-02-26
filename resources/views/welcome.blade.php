@@ -3,11 +3,40 @@
 @section('page-title', 'Home')
 
 @section('main-content')
-<h1>
-    Laravel Start 1
-</h1>
+<div class="container">
+    <ul class="row g-0">
+        @foreach ($movies as $singleMovie)
+            <li class="movie-card">
+                <a href="#nogo">
+                    <h4>
+                        {{ $singleMovie->title }}
+                    </h4>
 
-<h2>
-    Ciao {{ $firstName }} {{ $lastName }}
-</h2>
+                    <div class="info">
+                        <div>
+                            <span>
+                                {{ '( '.$singleMovie->original_title.' )' }}
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                {{ $singleMovie->nationality }}
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                {{ $singleMovie->date }}
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                Vote : {{ $singleMovie->vote }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        @endforeach
+    </ul>
+</div>
 @endsection
