@@ -7,7 +7,7 @@
     <ul class="row g-0">
         @foreach ($movies as $singleMovie)
             <li class="movie-card">
-                <a href="#nogo">
+                <a href="{{ route('movie.show', ['id' => $singleMovie->id]) }}">
                     <h4>
                         {{ $singleMovie->title }}
                     </h4>

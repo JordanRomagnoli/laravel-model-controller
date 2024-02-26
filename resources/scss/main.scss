@@ -15,11 +15,15 @@
             
             text-decoration: none;
             color: black;
+            display: block;
             height: 100%;
-            h4{
-                
-            }
             }
         }
+    }
+}
+
+.container{
+    .single-card{
+        width: 30%;
     }
 }

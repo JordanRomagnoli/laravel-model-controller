@@ -15,3 +15,4 @@ use App\Http\Controllers\Guest\MoviesController;
 */
 
 Route::get('/', [MoviesController::class, 'index'])->name('movies');
+Route::get('show/{id}', [MoviesController::class, 'show'])->name('movie.show');
